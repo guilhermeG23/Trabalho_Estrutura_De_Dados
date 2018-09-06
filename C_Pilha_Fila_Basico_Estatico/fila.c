@@ -1,8 +1,8 @@
+//imports
 #include <stdio.h>
 #include <stdlib.h>
 
 //Criando uma fila basica
-//Nivel tosco pra cacete
 
 //Variaveis
 int Fila[100]; //Array
@@ -53,12 +53,16 @@ int Fila_Adicionar() {
 }
 
 //Enchendo a fila
+//preenche todos os valores restantes da fila
 int Fila_Veloz() {
+    //confirma se a fila ta cheia
 	if(Fila_Cheia() == 0) {
+        //contador para saber como ta fila ta e preenchendo os valores
 		for(;Contador < 99; Contador++) {
-			Atual++;
-			Fila[Contador] = Atual;
+			Atual++; //incrementado
+			Fila[Contador] = Atual; //array para armazenar o valor
 		}
+    //mensagem de que a fila ta cheia
 	} else {
 		printf("Fila Cheia!\n");
 		return 1;
@@ -81,6 +85,7 @@ int Fila_Deletar() {
 }
 
 //Print
+//imprimi o estado atual sa fila, o primeiro e o ultimo valor
 void Fila_Status() {
 	printf("\n");
 	printf("Primeiro da fila: Fila[%d], Valor[%d]\n", Contador_Do_Primeiro, Fila[Contador_Do_Primeiro]);
@@ -89,6 +94,7 @@ void Fila_Status() {
 }
 
 //Funcao principal
+//usando os metodos para criar um exemplo
 int main() {
 	Fila_Criar();
 	Fila_Status();

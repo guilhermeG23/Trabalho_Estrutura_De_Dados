@@ -1,10 +1,12 @@
+//imports
 #include <stdio.h>
 #include <stdlib.h>
 
-//PIlha basica em C
+//Pilha basica em C
+//Segue o mesmo exemplo de fila
 
 //Variaveis do ambiente
-int Pilha[100];
+int Pilha[100]; 
 int Contador = 0;
 int Anterior;
 int Topo;
@@ -13,8 +15,8 @@ int Topo;
 //Criar uma pilha
 int Pilha_Criar() {
 	//Setando os valores iniciais de uma pilha
-	Topo = 1;
-	Pilha[Contador] = Topo;
+	Topo = 1; //O topo 
+	Pilha[Contador] = Topo; // colocação do topo na fila
 	return 0;
 }
 
@@ -102,6 +104,7 @@ int Pilha_Deletar() {
 }
 
 //Funcao principal
+//usando os metodos para criar o exemplo
 int main() {
 	Pilha_Criar();
 	Pilha_Atual();

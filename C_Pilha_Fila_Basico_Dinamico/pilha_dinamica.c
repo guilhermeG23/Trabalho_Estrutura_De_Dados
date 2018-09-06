@@ -1,3 +1,4 @@
+//imports
 #include <stdio.h>
 #include <stdlib.h>
 //Definir o limite de uma contante
@@ -7,9 +8,11 @@
 //Inserção, leitura e delete é feita no topo
 
 //Limitado a valores inteiros
+//criando a estrutura
 typedef struct  {
 	int Item[MAXTAM];
 	int Topo;
+//nome da estrutura
 } TPilha;
 
 //Iniciar a pilha
